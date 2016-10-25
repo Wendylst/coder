@@ -64,7 +64,7 @@ public class urlController {
 	}
 	@RequestMapping(value = "/admin_main", method = RequestMethod.POST)
 	public String system_main(Locale locale, Model model) {
-		System.out.println("包府包府 包府磊");
+		System.out.println("包府磊");
 		return "admin_main";
 	}
 	@RequestMapping(value = "/client_regist", method = RequestMethod.POST)
