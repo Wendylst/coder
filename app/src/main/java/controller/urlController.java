@@ -83,8 +83,6 @@ public class urlController {
 		}
 	}
 
-
-
 	
 	// 로그인페이지 
 	@RequestMapping(value = "/main", method = RequestMethod.POST)
