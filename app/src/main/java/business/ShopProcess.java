@@ -1,5 +1,8 @@
 package business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSession;
@@ -25,7 +28,11 @@ public class ShopProcess {
 		int ret=  session.insert("system.a.insert_Shop", shop);
 		return ret;
 	 }
-
+	
+	public List<Shop> ShopList(String bs_no){
+				
+		return session.selectList("sysotem.a.shopList", bs_no);
+	}
 
 
 }
