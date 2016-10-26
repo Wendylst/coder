@@ -30,7 +30,7 @@ public class Business_client {
 	}
 
 
-
+	
 
 	public int getBs_no() {
 		return bs_no;
@@ -121,7 +121,10 @@ public class Business_client {
 		this.manager_email = manager_email;
 	}      
 	
-	
+	public Business_client(String bs_email, String bs_password){
+		this.bs_email = bs_email;
+		this.bs_password = bs_password;
+	};
 	
 	
 }

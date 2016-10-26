@@ -2,7 +2,7 @@ package business;
 
 public class Cart {
 
-	// 장 바 구 니 
+	/* 장 바 구 니 */
 	private int client_no; //회원번호
 	private int menu_no;   // 매뉴번호
 	private int cart_no;   // 장바구니 번호  
