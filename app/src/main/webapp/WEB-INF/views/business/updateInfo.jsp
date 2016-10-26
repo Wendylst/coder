@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Coder : 업체 정보 수정</title>
+<title>Coder : 업체용</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -12,7 +12,7 @@
 </head>
 <body>
 <div data-role= "page" >
-<div data-role= "header" ><h1>Coder : 업체 정보 수정</h1></div> 
+<div data-role= "header" ><h1>Coder : 업체용</h1></div> 
 <div data-role= "content" >
 <!-- 작성시작부분 -->
 ─업체 정보 수정─<br><br>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="system.a">
 	<insert id="insert_Shop" parameterType="business_client.Shop">
 		  INSERT INTO Shop
 	      values(shop_no_seq.NEXTVAL, #{shop_name},#{shop_address},#{operation_hour},#{shop_phone},
-	      #{title},0,1," ")
+	      #{title},0,1,' ')
 	</insert> 
 </mapper>	

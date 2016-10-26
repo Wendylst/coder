@@ -11,16 +11,19 @@ import client.Client;
 
 @Repository
 public class ShopProcess {
+	
 	Shop shop = new Shop();
+	
 	@Autowired
 	SqlSession session;
 	
 	@Autowired
 	DataSource dataSource;
 
-	public String insert_Shop(Shop shop){
-		int ret=  session.insert("loginchk.a.insert_Shop", shop);
-		 return ret>0? "입력성공":"입력실패";
+	public int insert_Shop(Shop shop){
+		System.out.println(shop);
+		int ret=  session.insert("system.a.insert_Shop", shop);
+		return ret;
 	 }
 
 
