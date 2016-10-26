@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 select * from client
 select * from client where email='admin@gmail.com' and password='1234'
 
