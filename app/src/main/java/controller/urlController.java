@@ -82,7 +82,7 @@ public class urlController {
 		System.out.println(client);
 		String ret = login.insert_bs_Client(client);
 		System.out.println(ret);
-		System.out.println("호진");
+		System.out.println("호진22222222");
 		return "main";
 	}
 	
