@@ -82,7 +82,7 @@ public class urlController {
 		System.out.println(client);
 		String ret = login.insert_bs_Client(client);
 		System.out.println(ret);
-		
+		System.out.println("È£Áø");
 		return "main";
 	}
 	
