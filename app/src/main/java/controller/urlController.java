@@ -2,6 +2,8 @@ package controller;
 
 import java.util.Locale;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jca.cci.object.MappingCommAreaOperation;
 import org.springframework.stereotype.Controller;
@@ -30,17 +32,22 @@ public class urlController {
 	public String login(Locale locale, Model model) {
 		return "login";
 	}
+	
+	@RequestMapping(value = "/loginChk", method =RequestMethod.GET)
+	public String list(){
+		return "client/main";
+	}
 
 	@RequestMapping(value = "/loginChk", method = RequestMethod.POST)
-	public ModelAndView admin(String email, String pass, Model model) {
+	public ModelAndView admin(String email, String pass, Model model, HttpSession session) {
 		System.out.println(email);
 		System.out.println(pass);
+		
 		ModelAndView mv = new ModelAndView();
 		user = login.login(email, pass);
 		if (user == null) { // Client 에 존재 하지 않은 경우
-			bs_client = login.bs_login(email, pass);
-			if(bs_client != null){
-				
+			bs_client = login.bs_login(email, pass);			
+			if(bs_client != null){				
 				mv.setViewName("business/main");
 				model.addAttribute("user", bs_client);
 				System.out.println(bs_client.getBusiness_name()+"/"+bs_client.getManager_name());
@@ -55,6 +62,7 @@ public class urlController {
 		} else {	// Client 에 존재 하는 경우 
 			
 			if(user.getEmail().equals("admin@gmail.com")){	// id가 관리자 아이디냐?				
+			
 				mv.addObject("user", user);
 				mv.setViewName("admin/main");
 				model.addAttribute("user", user);
