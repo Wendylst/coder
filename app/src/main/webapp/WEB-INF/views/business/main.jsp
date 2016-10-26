@@ -26,6 +26,13 @@ ${user.manager_name}님 안녕하세요.
 			<input type="hidden" name ="business_name" value="${user.business_name}">
 			<input type="hidden" name ="manager_name" value="${user.manager_name}">
 			</form>
+			<form method="post" action="bs_update"><input type="submit" value="업체정보수정">
+			<input type="hidden" name ="business_name" value="${user.business_name}">
+			<input type="hidden" name ="manager_name" value="${user.manager_name}">
+			</form>
+			
+			
+			
 			
 </div>
 <div data-role= "footer" ><h2>Copyright ⓒToBeNull Corp. All Rights Reserved.</h2></div>

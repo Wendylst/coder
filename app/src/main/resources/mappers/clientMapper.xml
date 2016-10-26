@@ -4,23 +4,42 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="loginchk.a">
+	<!-- 사용자/관리자 로그인 -->
 	<select id="login" parameterType="String" resultType="client.Client">
 		select * from client where email=#{email} and password=#{password}
 	</select>
 	
+	<!-- 업체 로그인 -->
 	<select id="bs_login" parameterType="String" resultType="business_client.Business_client">
 		select * from business_client where bs_email=#{bs_email} and bs_password=#{bs_password}
 	</select> 
 	
+	<!-- 개인 회원 가입 -->
 	<insert id="insert_Client" parameterType="client.Client">
 		  INSERT INTO client
 	      values(client_no_seq.NEXTVAL,#{email},#{password},#{name},#{phone})
 	</insert> 
 	
+	<!-- 업체 회원 가입  -->
 	<insert id="insert_bs_Client" parameterType="business_client.Business_client">
 		  INSERT INTO business_client
 	      values(bs_no_seq.NEXTVAL,#{bs_email},#{bs_password},#{business_name},#{business_phone},
 	      #{representative},#{cr_no},#{manager_name},#{manager_phone},#{manager_email})
 	</insert> 
+	
+	<!-- 매장 등록 -->
+
+	<!-- SHOP_NO                                   NOT NULL NUMBER(5)
+ SHOP_NAME                                          VARCHAR2(30)
+ SHOP_ADDRESS                                       VARCHAR2(100)
+ OPERATION_HOUR                                     VARCHAR2(10)
+ SHOP_PHONE                                         VARCHAR2(20)
+ TITLE                                              VARCHAR2(200)
+ APPROVAL_CHK                                       VARCHAR2(10)
+ BS_NO                                     NOT NULL NUMBER(5)
+ SHOP_IMG                                           VARCHAR2(200)  -->
+	
+	
+	
 	
 </mapper>

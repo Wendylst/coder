@@ -4,6 +4,7 @@ select * from client where email='admin@gmail.com' and password='1234'
 
 
 
+select * from shop;
 select * from business_client
 
 	  INSERT INTO CLIENT ()

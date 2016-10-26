@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<mapper namespace="system.a">
+	<insert id="insert_Shop" parameterType="business_client.Shop">
+		  INSERT INTO Shop
+	      values(shop_no_seq.NEXTVAL, #{shop_name},#{shop_address},#{operation_hour},#{shop_phone},
+	      #{title},0,1," ")
+	</insert> 
+</mapper>	
