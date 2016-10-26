@@ -20,7 +20,6 @@ public class Business_client {
 	
 	
 	
-	
 	@Override
 	public String toString() {
 		return "Business_client [business_name=" + business_name + ", bs_no=" + bs_no + ", bs_email=" + bs_email
@@ -125,6 +124,9 @@ public class Business_client {
 		this.bs_email = bs_email;
 		this.bs_password = bs_password;
 	};
+
+
+	
 	
 	
 }

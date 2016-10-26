@@ -99,6 +99,8 @@ public class urlController {
 	@RequestMapping(value = "/bs_regist", method = RequestMethod.POST)
 	public String bs_regist_post(Locale locale, Model model, Business_client client) {
 		String ret = login.insert_bs_Client(client);
+		System.out.println(ret);
+
 		return "main";
 	}
 	@RequestMapping(value = "/insertShop", method = RequestMethod.POST)
