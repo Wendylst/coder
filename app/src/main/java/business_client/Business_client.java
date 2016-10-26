@@ -12,7 +12,7 @@ public class Business_client {
 	private int cr_no;				 // 사업자등록번호    
 	private String manager_name;     // 담당자 이름
 	private String manager_phone;    // 담당자 번호
-	private String manager_email;    // 담당자 이메일
+	private String manager_email;    // 담당자 이메일zzz
 	
 	public Business_client(){
 		
