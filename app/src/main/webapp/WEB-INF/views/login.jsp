@@ -27,13 +27,13 @@
 <div data-role= "content" >
 <form method="post" action="loginChk">
 <table>
-<tr><td>EMAIL</td><td><input type="text" name ="email" size="40%"></td></tr>
-<tr><td>비밀번호</td><td><input type="password" name ="pass" size="40%"></td></tr>
+<tr><td size="20%">EMAIL</td><td><input type="text" name ="email" size="30%"></td></tr>
+<tr><td>비밀번호</td><td><input type="password" name ="pass" size="30%"></td></tr>
 <tr><td></td><td><input type="submit" value="로그인"></td></tr>
 </table>
 </form>
 <br><br><br><br><br>
-<button id="regist1">회원 가입(개인)</button><button id="regist2">회원 가입(업체)</button><button>비회원 로그인</button>
+<button id="regist1">회원 가입(개인)</button><button id="regist2">회원 가입(업체)</button>
 </div>
 <div data-role= "footer" ><h2>Copyright ⓒToBeNull Corp. All Rights Reserved.</h2></div>
 </div>

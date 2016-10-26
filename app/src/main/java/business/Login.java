@@ -46,6 +46,14 @@ public class Login {
 		return ret>0? "입력성공":"입력실패";
 	}
 	
+	public Business_client bs_login(String email, String password){
+		System.out.println("업체 회원 로그인    Login = "+email + " password ="+ password);
+		 Map<String,String> me= new HashMap<String, String>();
+		 me.put("bs_email", email);
+		 me.put("bs_password", password);
+		 
+		return session.selectOne("loginchk.a.bs_login", me);
+	}
 	
 	
 	
