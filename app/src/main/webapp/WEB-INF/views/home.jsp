@@ -6,9 +6,9 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Hello! This is a practice project.  
 </h1>
+<a href="login">click</a>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
