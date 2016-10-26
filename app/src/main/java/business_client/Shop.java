@@ -66,6 +66,12 @@ public class Shop {
 	public void setShop_img(String shop_img) {
 		this.shop_img = shop_img;
 	}
+	@Override
+	public String toString() {
+		return "Shop [shop_no=" + shop_no + ", shop_name=" + shop_name + ", shop_address=" + shop_address
+				+ ", operation_hour=" + operation_hour + ", shop_phone=" + shop_phone + ", title=" + title
+				+ ", approval_chk=" + approval_chk + ", bs_no=" + bs_no + ", shop_img=" + shop_img + "]";
+	}
 
 	
 	

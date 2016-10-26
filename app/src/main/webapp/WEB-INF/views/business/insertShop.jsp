@@ -18,8 +18,8 @@
 ─ 매장 등록 ─<br><br>
 <form method="post" action="insertShopInfo" >
 <table  class="tr1">
-	<tr><td>업체명</td><td><input type="text" value ="${business_name}" disabled="disabled"></td></tr>
-	<tr><td>담당자이름</td><td><input type="text" value ="${manager_name}" disabled="disabled"></td></tr>	
+	<tr><td>업체명</td><td><input type="text" value ="${user.business_name}" disabled="disabled"></td></tr>
+	<tr><td>담당자이름</td><td><input type="text" value ="${user.manager_name}" disabled="disabled"></td></tr>	
 	
 	<tr><td>매장명</td><td><input type="text" name ="shop_name"></td></tr>
 	<tr><td>매장주소</td><td><input type="text" name ="shop_address"></td></tr>
@@ -29,7 +29,7 @@
 </table>
 <input type="submit" name ="register" value="등록">
 </form>
-<form method="post" action="business/main"><input type="submit" value="취소"></form>
+<form method="get" action="business/main"><input type="submit" value="취소"></form>
 <!-- 종료부분 -->
 </div>
 <div data-role= "footer" >
