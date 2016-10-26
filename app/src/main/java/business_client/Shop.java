@@ -65,6 +65,11 @@ public class Shop {
 	}
 	public void setShop_img(String shop_img) {
 		this.shop_img = shop_img;
-	}         
+	}
+
+	
+	
+	
+	
 	
 }

@@ -12,12 +12,11 @@ public class Business_client {
 	private int cr_no;				 // 사업자등록번호    
 	private String manager_name;     // 담당자 이름
 	private String manager_phone;    // 담당자 번호
-	private String manager_email;    // 담당자 이메일zzz
+	private String manager_email;    // 담당자 이메일
 	
 	public Business_client(){
 		
 	}
-	
 	
 	
 	
@@ -30,7 +29,7 @@ public class Business_client {
 	}
 
 
-
+	
 
 	public int getBs_no() {
 		return bs_no;
@@ -121,6 +120,12 @@ public class Business_client {
 		this.manager_email = manager_email;
 	}      
 	
+	public Business_client(String bs_email, String bs_password){
+		this.bs_email = bs_email;
+		this.bs_password = bs_password;
+	};
+
+
 	
 	
 	
