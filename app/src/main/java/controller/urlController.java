@@ -82,11 +82,9 @@ public class urlController {
 		System.out.println(client);
 		String ret = login.insert_bs_Client(client);
 		System.out.println(ret);
-<<<<<<< HEAD
-		System.out.println("호진진진진2");
-=======
+
 		System.out.println("호진22222222");
->>>>>>> refs/heads/master
+
 		return "main";
 	}
 	
