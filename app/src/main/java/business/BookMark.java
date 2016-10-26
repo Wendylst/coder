@@ -2,9 +2,9 @@ package business;
 
 public class BookMark {
 	
-	// 자주 가는 카페 설정
+	/* 자주 가는 카페 설정 */
 	
-	private int client_no;   // 회원번호
+	private int client_no;   // 회원번호zzz
 	private int shop_no;	 // 매장번호
 	private int bookmark_no; // 즐겨찾기 번호 
 	
