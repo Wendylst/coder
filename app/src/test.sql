@@ -11,13 +11,11 @@ select * from business_client
 	  VALUES (CLIENT_SEQ.NEXTVAL,'hira7@naver.com','1234','예솔','010-0000-0000')
 	  
 	  
-	  
 INSERT INTO shop 
 values (shop_no_seq.NEXTVAL, '쏠카페','서울시 강남구 역삼동 1','09시-22시','010-0000-0000',
-	      '테스트임',0,1,' ')
+	      '테스트임',0,1,'img/angelinus.JPG')
 	     
 	     delete from shop where 4=4;
-
 	     
 	     select * from business_client where bs_no=1
 	     

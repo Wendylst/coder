@@ -27,8 +27,8 @@ $(function() {
 ─ 매장 등록 ─<br><br>
 <form method="post" action="../insertShopInfo" >
 <table  class="tr1">
-	<tr><td>업체명</td><td><input type="text" value ="${user.business_name}" disabled="disabled"></td></tr>
-	<tr><td>담당자이름</td><td><input type="text" value ="${user.manager_name}" disabled="disabled"></td></tr>
+	<tr><td>업체명</td><td><input type="text" value ="<%=session.getAttribute("business_name")%>" disabled="disabled"></td></tr>
+	<tr><td>담당자이름</td><td><input type="text" value ="<%=session.getAttribute("manager_name")%>" disabled="disabled"></td></tr>
 	<tr><td>매장명</td><td><input type="text" name ="shop_name"></td></tr>
 	<tr><td>매장주소</td><td><input type="text" name ="shop_address"></td></tr>
 	<tr><td>영업시간</td><td><input type="text" name ="operation_hour"></td></tr>
