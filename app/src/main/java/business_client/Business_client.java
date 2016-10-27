@@ -20,6 +20,22 @@ public class Business_client {
 	
 	
 	
+	public Business_client(String bs_email, String bs_password, String business_name, String business_phone,
+			String representative, int cr_no, String manager_name, String manager_phone, String manager_email) {
+		super();
+		this.bs_email = bs_email;
+		this.bs_password = bs_password;
+		this.business_name = business_name;
+		this.business_phone = business_phone;
+		this.representative = representative;
+		this.cr_no = cr_no;
+		this.manager_name = manager_name;
+		this.manager_phone = manager_phone;
+		this.manager_email = manager_email;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "Business_client [business_name=" + business_name + ", bs_no=" + bs_no + ", bs_email=" + bs_email
@@ -106,19 +122,7 @@ public class Business_client {
 		this.manager_phone = manager_phone;
 		this.manager_email = manager_email;
 	}
-	public Business_client(String business_name, String bs_email, String bs_password, String business_phone,
-			String representative, int cr_no, String manager_name, String manager_phone, String manager_email) {
-		super();
-		this.business_name = business_name;
-		this.bs_email = bs_email;
-		this.bs_password = bs_password;
-		this.business_phone = business_phone;
-		this.representative = representative;
-		this.cr_no = cr_no;
-		this.manager_name = manager_name;
-		this.manager_phone = manager_phone;
-		this.manager_email = manager_email;
-	}      
+
 	
 	public Business_client(String bs_email, String bs_password){
 		this.bs_email = bs_email;

@@ -55,7 +55,17 @@ public class Login {
 		return session.selectOne("loginchk.a.bs_login", me);
 	}
 	
-	
+	public Business_client bs_Client_Info(String bs_no){
+		
+		return session.selectOne("loginchk.a.bs_client_info",bs_no);
+		
+	}
+	public int bs_Client_update(Business_client client){
+		
+		int ret = session.selectOne("loginchk.a.bs_client_update",client);
+		return  ret;
+		
+	}
 	
 	
 }
