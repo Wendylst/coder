@@ -32,4 +32,14 @@
     <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MapSearch</display-name>
+    <servlet-name>MapSearch</servlet-name>
+    <servlet-class>controller.MapSearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MapSearch</servlet-name>
+    <url-pattern>/MapSearch</url-pattern>
+  </servlet-mapping>
 </web-app>
