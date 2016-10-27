@@ -23,7 +23,7 @@ ${user.manager_name}님 안녕하세요.
 <form method="post" action="business/insertShop"><input type="submit" value="매장등록"></form>
 <form method="post" action="business/shopUpdate"><input type="submit" value="매장정보수정"><input type="hidden" name="bs_no" value="${user.bs_no}"></form>
 <form method="post" action="business/bs_update"><input type="submit" value="업체정보수정"><input type="hidden" name="bs_no" value="${user.bs_no}"></form>
-<a href="localhost:9999/testsol/login"><button>홈</button></a>
+<a href="http://localhost:9999/testsol/login"><button>홈</button></a>
 </div>
 <div data-role= "footer" ><h2>Copyright ⓒToBeNull Corp. All Rights Reserved.</h2></div>
 </div>

@@ -91,6 +91,15 @@ public class urlController {
 	}
 
 	// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━사용자용━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━//
+	
+	@RequestMapping(value = "/testpage", method = RequestMethod.GET)
+	   public String goToMain(Locale locale, Model model){
+		System.out.println("아아ㅏ");
+	    return "/client/main";
+	   }
+	
+	
+	
 	// 사용자 - 회원가입 버튼 눌렀을 시에 페이지 이동
 	@RequestMapping(value = "/client/register", method = RequestMethod.GET)
 	public String client_regist(Locale locale, Model model) {

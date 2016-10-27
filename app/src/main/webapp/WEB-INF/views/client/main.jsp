@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/modal.css">
 <style>
       #map {
-        height: 80%;
+        height: 50%;
       }
 </style>
 </head>
@@ -33,7 +33,7 @@
       <li><a onclick="goMap()"><img src="resources/img/coffeeBean.JPG" ><h1>Coffe Bean</h1></a></li>
       <li><a onclick="goMap()"><img src="resources/img/pascucci.JPG" ><h1>Passcucci</h1></a></li>
       <li><a onclick="goMap()"><img src="resources/img/starBucks.JPG" ><h1>Star Bucks</h1></a></li>
-      <li><a onclick="goMap()"><img src="resources/img/tomNtoms.JPG" ><.h1>Tom N Toms</h1></a></li>
+      <li><a onclick="goMap()"><img src="resources/img/tomNtoms.JPG" ><h1>Tom N Toms</h1></a></li>
     </ul>
     
 

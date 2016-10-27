@@ -13,4 +13,8 @@
 	<select id="shopList" parameterType="String" resultType="business_client.Shop">
 	select * from shop where bs_no = #{bs_no}
 	</select>
+	
+	
+	
+	
 </mapper>	

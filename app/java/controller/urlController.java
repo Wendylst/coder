@@ -35,6 +35,10 @@ public class urlController {
 	public String login(Locale locale, Model model) {
 		return "login";
 	}
+	@RequestMapping(value = "/testpage", method = RequestMethod.GET)
+	public String testpage(Locale locale, Model model) {
+		return "client/main";
+	}
 
 
 	@RequestMapping(value = "/loginChk", method = RequestMethod.POST)
@@ -61,7 +65,7 @@ public class urlController {
 			mv.setViewName("admin/main");
 			return mv; // 관리자 페이지로 이동
 		}
-		System.out.println("사용자");
+	
 		mv.setViewName("client/main");
 		return mv; // 개인회원 메인 페이지로 이동
 	}
@@ -171,19 +175,27 @@ public class urlController {
 		return "business/main";
 	}
 
-	// 업체 - 매장 정보 수정
+	// 업체 - 매장 정보 수정 (매장 리스트)
 	@RequestMapping(value = "/business/shopUpdate", method = RequestMethod.POST)
 	public ModelAndView ShopInfo(Locale locale, Model model, String bs_no) {
 		ModelAndView mv = new ModelAndView();
 		List<Shop> list = shopProcess.ShopList(bs_no);
 		mv.addObject("shop",list);
-		mv.setViewName("ShopList");
+		mv.setViewName("business/shopList");
 		return mv;
 	}
 
 	
-	
-	
+	// 업체 - 매장 정보 수정 
+	@RequestMapping(value = "/business/updateShop", method = RequestMethod.POST)
+	public ModelAndView updateShop(Locale locale, Model model, int shop_no) {
+		ModelAndView mv = new ModelAndView();
+		/*
+		List<Shop> list = shopProcess.ShopList(shop_no);
+		mv.addObject("shop",list);
+		mv.setViewName("business/shopList");*/
+		return mv;
+	}
 	
 	
 	
