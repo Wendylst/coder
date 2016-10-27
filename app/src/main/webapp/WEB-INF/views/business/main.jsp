@@ -14,12 +14,11 @@
 </head>
 <body>
 <div data-role= "page"  data-theme="a">
-${user.business_name} / 
-${user.manager_name}님 안녕하세요.
+<%=session.getAttribute("business_name")%> / <%=session.getAttribute("manager_name")%> 님 안녕하세요.
 
 <div data-role= "header" ><h1>Coder : 업체용</h1></div> 
 
-<div data-role= "content" >
+<div data-role= "content" > <!-- BS_NO 세션처리하기  -->
 <form method="post" action="business/insertShop"><input type="submit" value="매장등록"></form>
 <form method="post" action="business/shopUpdate"><input type="submit" value="매장정보수정"><input type="hidden" name="bs_no" value="${user.bs_no}"></form>
 <form method="post" action="business/bs_update"><input type="submit" value="업체정보수정"><input type="hidden" name="bs_no" value="${user.bs_no}"></form>

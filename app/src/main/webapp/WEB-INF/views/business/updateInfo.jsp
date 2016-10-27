@@ -24,7 +24,7 @@
 			<!-- 작성시작부분 -->
 			─업체 정보 수정─<br>
 			<br>
-			<form method="post" action="../bs_updateInfo">
+			<form method="post" action="business/bs_updateInfo">
 				<table class="tr1">
 					<tr>
 						<td>대표이메일</td>
@@ -75,7 +75,7 @@
 		
 			<!-- 종료부분 -->
 		</div>
-		<a href="localhost:9999/testsol/login"><button>홈</button></a>
+		<a href="loginChk"><button>홈</button></a>
 		<div data-role="footer"></div>
 	</div>
 </body>

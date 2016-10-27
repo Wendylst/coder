@@ -14,7 +14,16 @@
 	select * from shop where bs_no = #{bs_no}
 	</select>
 	
+	<update id="shopUpdate" parameterType="business_client.Shop">
+		update shop
+		set shop_name=#{shop_name}, shop_address=#{shop_address},operation_hour=#{operation_hour}, 
+			shop_phone = #{shop_phone}
+		where shop_no= #{shop_no}
+	</update>
 	
+	<delete id="shopdelete" parameterType="String">
+	delete from shop where shop_no = #{shop_no}
+	</delete>
 	
 	
 </mapper>	

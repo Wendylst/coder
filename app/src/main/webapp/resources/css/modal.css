@@ -1,11 +1,15 @@
 @CHARSET "UTF-8";
 /* The Modal (background) */
-.modal {
+      #map {
+        height: 80%;
+      }
+      .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 200px; 
+/*     padding-top: 200px;  */
     top: 0;
+    left:0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
@@ -46,7 +50,6 @@
     color: white;
 }
 
-.modal-body {padding: 2px 16px;}
 
 .modal-footer {
     padding: 2px 5px;

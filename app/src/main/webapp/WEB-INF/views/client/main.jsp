@@ -25,7 +25,10 @@
 <div data-role= "content" >
 <!-- 작성시작부분 -->
 <h2>Coffee Shops</h2>
+<script>
 
+
+</script>
     <ul data-role="listview"> 
       <li><a onclick="goMap()"><img src="resources/img/aroundMe.JPG" >Around me</a></li>
       <li><a onclick="goMap()"><img src="resources/img/angelinus.JPG" ><h1>Angelinus</h1></a></li>
