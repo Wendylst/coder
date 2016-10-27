@@ -14,12 +14,10 @@
 		select * from business_client where bs_email=#{bs_email} and bs_password=#{bs_password}
 	</select> 
 	
-	<!-- 개인 회원 가입 -->
-	<insert id="insert_Client" parameterType="client.Client">
-		  INSERT INTO client
-	      values(client_no_seq.NEXTVAL,#{email},#{password},#{name},#{phone})
-	</insert> 
 	
+	
+	
+
 	<!-- 업체 회원 가입  -->
 	<insert id="insert_bs_Client" parameterType="business_client.Business_client">
 		  INSERT INTO business_client
@@ -27,17 +25,29 @@
 	      #{representative},#{cr_no},#{manager_name},#{manager_phone},#{manager_email})
 	</insert> 
 	
-	<!-- 매장 등록 -->
-
-	<!-- SHOP_NO                                   NOT NULL NUMBER(5)
- SHOP_NAME                                          VARCHAR2(30)
- SHOP_ADDRESS                                       VARCHAR2(100)
- OPERATION_HOUR                                     VARCHAR2(10)
- SHOP_PHONE                                         VARCHAR2(20)
- TITLE                                              VARCHAR2(200)
- APPROVAL_CHK                                       VARCHAR2(10)
- BS_NO                                     NOT NULL NUMBER(5)
- SHOP_IMG                                           VARCHAR2(200)  -->
+	<!-- 업체 정보 조회 -->
+	<select id="bs_client_info" resultType="business_client.Business_client">
+		select * from business_client where bs_no= #{bs_no}
+	</select>
+	
+	<update id="bs_client_update" parameterType="business_client.Business_client">
+		update business_client
+		set bs_password=#{bs_password}, business_name=#{business_name},business_phone=#{business_phone}, 
+			representative = #{representative}, cr_no = #{cr_no}, manager_name=#{manager_name}, manager_phone=#{manager_phone},manager_email=#{manager_email}
+		where bs_no= #{bs_no}
+	</update>
+	
+	
+	
+	
+	<!-- 개인 회원 가입 -->
+	<insert id="insert_Client" parameterType="client.Client">
+		  INSERT INTO client
+	      values(client_no_seq.NEXTVAL,#{email},#{password},#{name},#{phone})
+	</insert> 
+	
+	
+	
 	
 	
 	

@@ -9,4 +9,8 @@
 	      values(shop_no_seq.NEXTVAL, #{shop_name},#{shop_address},#{operation_hour},#{shop_phone},
 	      #{title},0,1,' ')
 	</insert> 
+	
+	<select id="shopList" parameterType="String" resultType="business_client.Shop">
+	select * from shop where bs_no = #{bs_no}
+	</select>
 </mapper>	
