@@ -1,8 +1,10 @@
 package controller;
 
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,15 +38,31 @@ public class urlController {
 		return "login";
 	}
 
+	@RequestMapping(value = "/map", method = RequestMethod.GET)
+	public void mapTest(HttpServletResponse response) throws Exception{
+		System.out.println("hello");
+		response.sendRedirect("client/main");
+//		return "client/main";
+		// return "client/mapView";
+	}
+	@RequestMapping(value = "/loginChk", method = RequestMethod.GET)
+	public ModelAndView mapTest2(HttpServletResponse response) throws Exception{
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("client/main");
+		System.out.println("/loginChk by GET");
+		return mv;
+		
+//		
+		// return "client/mapView";
+	}
 
 	@RequestMapping(value = "/loginChk", method = RequestMethod.POST)
 
-	public ModelAndView login_main(String email, String pass, Model model, HttpSession session) {
+	public ModelAndView login_main(String email, String pass, Model model, HttpSession session, HttpServletResponse response) throws Exception {
 
 		ModelAndView mv = new ModelAndView();
 		user = login.login(email, pass);
 		if (user == null) { // Client 에 존재 하지 않은 경우
-
 
 			bs_client = login.bs_login(email, pass);
 
@@ -66,21 +84,24 @@ public class urlController {
 
 				session.setAttribute("user", user);
 
-
 				mv.addObject("user", user);
 				model.addAttribute("user", user);
-				if (user.getEmail().equals("admin@gmail.com")) { // id가 관리자 
-					mv.setViewName("admin/main");
-					
-					return mv; // 관리자 페이지로 이동
-				}
-				mv.setViewName("client/main");
-				return mv; // 개인회원 메인 페이지로 이동
+
+				mv.setViewName("admin/main");
+
+				return mv; // 관리자 페이지로 이동
+
+			} else {				
+				 mv.setViewName("client/main");
+				 
+//				 PrintWriter outs = response.getWriter();
+//				 return  this.mapTest2(response);// 개인회원 메인 페이지로 이동
+//				 return new ModelAndView(new RedirectView("loginChk"));
+				 return mv;
 			}
 		}
-		return mv;
-	}
 
+	}
 
 	// 로그인페이지
 
@@ -98,13 +119,14 @@ public class urlController {
 	}
 
 	// 사용자 - 회원가입 입력시 성공하면 메인으로 이동
-	@RequestMapping(value =	 "/client_regist", method = RequestMethod.POST)
+	@RequestMapping(value = "/client_regist", method = RequestMethod.POST)
 	public String client_regist_post(Locale locale, Model model, Client client) {
 		String ret = login.insert_Client(client);
 		return "client/main";
 	}
 
-	// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━업 체  용━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━//
+	// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━업 체
+	// 용━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━//
 
 	// 업체 - 로그인시 업체용 메인화면 이동
 	@RequestMapping(value = "/business/main", method = RequestMethod.GET)
@@ -116,7 +138,7 @@ public class urlController {
 			mv.setViewName("../login");
 			return mv;
 		} else {
-			mv.setViewName("redirect:main");
+			mv.setViewName("client/main");
 			return mv;
 		}
 	}
@@ -124,7 +146,7 @@ public class urlController {
 	// 업체 - 업체 회원 가입 폼으로 주소 이동
 	@RequestMapping(value = "/business/register", method = RequestMethod.GET)
 	public String bs_regist(Locale locale, Model model) {
-		
+
 		return "business/register";
 	}
 
@@ -152,9 +174,9 @@ public class urlController {
 		mv.addObject("user", bs_client);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/updateInfo", method = RequestMethod.POST)
-	public ModelAndView bs_update_Info(Business_client client,Model model){
+	public ModelAndView bs_update_Info(Business_client client, Model model) {
 		System.out.println(client);
 		ModelAndView mv = new ModelAndView();
 		int ret = login.bs_Client_update(client);
@@ -167,8 +189,6 @@ public class urlController {
 		mv.setViewName("business/main");
 		return mv;
 	}
-	
-	
 
 	// 업체 - 매장등록 페이지로 전환
 	@RequestMapping(value = "/business/insertShop", method = RequestMethod.POST)
@@ -199,18 +219,12 @@ public class urlController {
 	public ModelAndView ShopInfo(Locale locale, Model model, String bs_no) {
 		ModelAndView mv = new ModelAndView();
 		List<Shop> list = shopProcess.ShopList(bs_no);
-		mv.addObject("shop",list);
+		mv.addObject("shop", list);
 		mv.setViewName("ShopList");
 		return mv;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━관 리 자 용━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━//
+	// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━관 리 자
+	// 용━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━//
 
 }

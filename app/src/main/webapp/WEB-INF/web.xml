@@ -42,4 +42,10 @@
     <servlet-name>MapSearch</servlet-name>
     <url-pattern>/MapSearch</url-pattern>
   </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.css</url-pattern>
+  <url-pattern>*.js</url-pattern>
+  <url-pattern>*.gif</url-pattern>
+ </servlet-mapping>
 </web-app>

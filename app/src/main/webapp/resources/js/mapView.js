@@ -13,8 +13,8 @@ function initMap() {
         lng: position.coords.longitude
       };
 
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('여기닷');
+/*      infoWindow.setPosition(pos);
+      infoWindow.setContent('여기닷');*/
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
