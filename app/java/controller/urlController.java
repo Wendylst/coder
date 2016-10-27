@@ -54,30 +54,19 @@ public class urlController {
 				mv.setViewName("redirect:http://localhost:9999/app/login");
 				return mv;
 			}
-		} else { // Client 에 존재 하는 경우
-			if (user.getEmail().equals("admin@gmail.com")) { // id가 관리자 아이디냐?
-				session.setAttribute("user", user);
-				mv.addObject("user", user);
-				model.addAttribute("user", user);
-				if (user.getEmail().equals("admin@gmail.com")) { // id가 관리자 
-					mv.setViewName("admin/main");
-					
-					return mv; // 관리자 페이지로 이동
-				}
-				mv.setViewName("client/main");
-				return mv; // 개인회원 메인 페이지로 이동
-			}
+		} // Client 에 존재 하는 경우
+		session.setAttribute("user", user);
+		mv.addObject("user", user);
+		if ("admin@gmail.com".equals(user.getEmail())){
+			mv.setViewName("admin/main");
+			return mv; // 관리자 페이지로 이동
 		}
-		return mv;
+		System.out.println("사용자");
+		mv.setViewName("client/main");
+		return mv; // 개인회원 메인 페이지로 이동
 	}
 
-	// 로그인페이지
-	@RequestMapping(value = "/main", method = RequestMethod.POST)
-	public String main(Locale locale, Model model) {
-		return "login";
-
-	}
-
+	
 	// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━사용자용━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━//
 	// 사용자 - 회원가입 버튼 눌렀을 시에 페이지 이동
 	@RequestMapping(value = "/client/register", method = RequestMethod.GET)

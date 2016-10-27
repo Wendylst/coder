@@ -27,8 +27,6 @@ public class Login {
 	}
 
 	public Client login(String email,String password){
-		 System.out.println("Login = "+email + "pass ="+ password);
-	
 		 Map<String,String> me= new HashMap<String, String>();
 		 me.put("email", email);
 		 me.put("password", password);
