@@ -18,6 +18,8 @@ CREATE SEQUENCE bs_no_seq
  NOCACHE
  NOCYCLE; 
 
+ 
+ CREATE TABLE client
 (
 	client_no            NUMBER(5)   ,
 	email                VARCHAR2(50) NOT NULL ,
